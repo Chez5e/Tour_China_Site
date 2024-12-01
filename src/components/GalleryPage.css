@@ -1,0 +1,233 @@
+/* components/GalleryPage.css */
+.gallery-page3 {
+    text-align: center;
+  }
+  
+  .gallery-container3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    animation: fadeInGallery 1s ease-out;
+  }
+  
+  .gallery-block3 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-block3:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery-image3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .gallery-block3:hover .overlay3 {
+    opacity: 1;
+  }
+  
+  .modal3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .modal3.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .modal3.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .modal-content3 {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 80%;
+    position: relative;
+    animation: scaleIn 0.5s ease-in-out;
+  }
+  
+  .close3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInClose 0.5s ease-in-out forwards;
+    transition: transform 0.3s ease;
+    z-index: 1050;
+  }
+  
+  .close3:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  
+  .modal-image3 {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    max-height: 1100px;
+    object-fit: cover;
+    animation: fadeInImage 1s ease-in-out;
+  }
+  
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .prev-button,
+  .next-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .star-icon {
+    color: gold;
+    font-size: 1.5rem;
+    margin: 0 2px;
+  }
+  
+  @keyframes fadeInGallery {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInClose {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInImage {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+/* Стиль для заголовков */
+
+h1{
+    font-family: 'Comfortaa', sans-serif;
+}
+
+h2{
+    font-family: 'Comfortaa', sans-serif;
+}
+h3{
+    font-family: 'Comfortaa', sans-serif;
+}
+h4{
+    font-family: 'Comfortaa', sans-serif;
+}
+
+
+p{
+    font-family: 'Comfortaa', sans-serif;
+}
+
+a{
+    font-family: 'Comfortaa', sans-serif;
+}
+
+button{
+    font-family: 'Comfortaa', sans-serif;
+}
+
