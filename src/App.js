@@ -9,6 +9,7 @@ import ContactSection from './components/ContactSection';
 import GalleryPage from './components/GalleryPage';  // Убедитесь, что путь правильный
 import './App.css';
 import './components/AOS.css';
+import MainSection from './components/MainSection';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<><Slider /><Sections /><ContactSection /></>} />
+          <Route path="/" element={<> <MainSection /><Slider /><Sections /><ContactSection /></>} />
           <Route path="/gallery" element={<GalleryPage />} />  {/* Страница галереи */}
         </Routes>
         <Footer />
