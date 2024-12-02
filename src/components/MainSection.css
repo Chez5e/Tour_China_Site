@@ -1,0 +1,68 @@
+.main-section {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    transition: background-image 1s ease-in-out;
+  
+    /* Добавляем тени по краям */
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5), 
+                inset 0 -50px 50px rgba(0, 0, 0, 0.8),
+                inset 0 50px 50px rgba(0, 0, 0, 0.8);
+  }
+  
+  .content {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный темный фон */
+    padding: 20px 40px;
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Легкая тень для объема */
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 3s ease-in;
+  }
+  
+  .learn-more-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e63946;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-button:hover {
+    background-color: #d62828;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

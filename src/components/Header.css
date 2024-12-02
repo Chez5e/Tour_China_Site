@@ -9,7 +9,7 @@
   position: sticky; 
   top: 0; 
   left: 0; 
-  width: 94.5%;
+  width: 96.9%;
   z-index: 1000; 
   font-family: 'Poppins', sans-serif; 
   transition: background-color 0.5s ease, color 0.5s ease;
@@ -95,16 +95,31 @@
   font-family: 'Poppins', sans-serif;
 }
 .theme-toggle {
-
-background: #202020;
-color: #FFF;
-transition: transform 0.3s;
+  background-color: transparent; /* Прозрачный фон */
+  border: 2px solid var(--primary-color); /* Границы основного цвета */
+  color: var(--primary-color); /* Цвет текста/иконки */
+  border-radius: 50%; /* Круглая кнопка */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Плавный переход для всех свойств */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem; /* Размер иконки */
 }
 
-.theme-toggle:hover{
+/* Эффект при наведении */
+.theme-toggle:hover {
+  background-color: var(--primary-color); /* Основной цвет */
+  color: #E63946;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Больше тени */
+}
 
-  transform: scale(1.1);
-  
+/* Активное состояние */
+.theme-toggle:active {
+  transform: scale(0.95); /* Лёгкое сжатие */
 }
 
 .search-icon:hover {
